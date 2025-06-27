@@ -1,0 +1,21 @@
+.intro-page {
+  --background: #336b5c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.intro-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-image {
+  width: 180px;
+  height: auto;
+  margin-bottom: 2rem;
+}
