@@ -18,14 +18,7 @@ const Profile: React.FC = () => {
   const history = useHistory();
   const [user, setUser] = useState<User | null>(null);
 
-  useEffect(() => {
-    const storedUser = localStorage.getItem('user');
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    } else {
-      history.push('/login'); // not logged in
-    }
-  }, [history]);
+  
 
   const handleLogout = () => {
     localStorage.removeItem('user');

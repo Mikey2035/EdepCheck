@@ -6,6 +6,10 @@ import { eye, eyeOff } from 'ionicons/icons';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { registerUser } from '../services/user.service';
+import { signInWithPopup } from 'firebase/auth';
+import { auth, googleProvider } from '../config/firebase';
+
+
 
 const SignUp: React.FC = () => {
   const history = useHistory();
@@ -42,6 +46,22 @@ const SignUp: React.FC = () => {
       setError('Server error. Please try again.');
     }
   };
+  const handleGoogleSignUp = async () => {
+  try {
+    const result = await signInWithPopup(auth, googleProvider);
+    const user = result.user;
+
+    // Optional: Store user info in your MySQL or Firestore backend
+    console.log("Google User:", user);
+
+    // Redirect after sign in
+    history.push('/home');
+  } catch (error) {
+    setError('Google sign-in failed. Try again.');
+    console.error(error);
+  }
+};
+
 
   return (
     <IonPage>
@@ -89,6 +109,8 @@ const SignUp: React.FC = () => {
           Already have an account? Log In
         </IonButton>
         <IonButton fill="clear" size="small" onClick={() => history.push('/forgot-password')}>Forgot Password?</IonButton>
+        <IonButton expand="block" color="secondary" onClick={handleGoogleSignUp}>Sign Up with Google</IonButton>
+
       </IonContent>
     </IonPage>
   );

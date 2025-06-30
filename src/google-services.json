@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "680616846449",
+    "project_id": "edepcheck",
+    "storage_bucket": "edepcheck.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:680616846449:android:c197acbb7b2f16c6c127d0",
+        "android_client_info": {
+          "package_name": "com.Edepcheck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "680616846449-ua9id1p7akl5607iga159ni0fm8nccru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfAKmm4MH7lGkoRz-UzMsrrOfjw5EDg_U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "680616846449-ua9id1p7akl5607iga159ni0fm8nccru.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
